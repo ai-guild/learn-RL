@@ -24,3 +24,6 @@ Collection of resources for learning and practising Reinforcement Learning, with
 - [Mountain Car Problem](https://github.com/openai/gym/wiki/MountainCarContinuous-v0)
 - [RL experiments in Tensorflow](https://github.com/MorvanZhou/Reinforcement-learning-with-tensorflow)
 - [dennybritz/reinforcement-learning - DQN](https://github.com/dennybritz/reinforcement-learning/tree/master/DQN)
+
+**Policy Gradient Methods**
+-[Continuous control with deep reinforcement learning](https://arxiv.org/abs/1509.02971), 9, sep 2015
