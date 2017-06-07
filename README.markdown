@@ -26,4 +26,5 @@ Collection of resources for learning and practising Reinforcement Learning, with
 - [dennybritz/reinforcement-learning - DQN](https://github.com/dennybritz/reinforcement-learning/tree/master/DQN)
 
 **Policy Gradient Methods**
--[Continuous control with deep reinforcement learning](https://arxiv.org/abs/1509.02971), 9, sep 2015
+- [Continuous control with deep reinforcement learning](https://arxiv.org/abs/1509.02971), 9, sep 2015
+- [Denny Britz] (https://github.com/dennybritz/reinforcement-learning/tree/master/PolicyGradient)
