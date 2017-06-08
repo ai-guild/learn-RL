@@ -26,8 +26,8 @@ class PolicyGradient:
         self.states = tf.placeholder(tf.float32, [None,input_dim], name="env_state")
         self.weight_1 = tf.get_variable("Weight_1", shape=[input_dim, num_hidden],initializer=layers.xavier_initializer())
         self.layer_1 = tf.nn.relu(tf.matmul(self.states, self.weight_1))
-        weight_2 = tf.get_variable("Weight_2", shape=[num_hidden, 1],initializer=layers.xavier_initializer())
-        self.prediction = tf.nn.softmax(tf.matmul(self.layer_1,weight_2,name="score"))
+        self.weight_2 = tf.get_variable("Weight_2", shape=[num_hidden, 1],initializer=layers.xavier_initializer())
+        self.prediction = tf.nn.softmax(tf.matmul(self.layer_1,self.weight_2,name="score"))
         self.train_variables = tf.trainable_variables()#differentiable variables for the gradient
         self.actions = tf.placeholder(dtype=tf.float32, shape=[None, 1], name="y")
         self.reward_signal = tf.placeholder(dtype=tf.float32, shape=None, name="reward")
@@ -47,7 +47,7 @@ class PolicyGradient:
         self.sess = tf.Session();
         self.sess.run(tf.global_variables_initializer())
         print("Started")
-        self.train()
+        
 
     def getReward(self, reward):
         discounted_reward = np.zeros_like(reward)
