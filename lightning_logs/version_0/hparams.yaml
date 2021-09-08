@@ -1,0 +1,11 @@
+env: CartPole-v0
+gamma: 0.99
+lr: 0.01
+batch_size: 8
+n_steps: 10
+avg_reward_len: 100
+entropy_beta: 0.01
+epoch_len: 1000
+num_batch_episodes: 4
+
+
