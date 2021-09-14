@@ -80,6 +80,7 @@ class DQN:
 
 
 if __name__ == "__main__":
+    batch_size = 32
     env = gym.make('CartPole-v0')
     agent = DQN(env)
     for e in range(100):
