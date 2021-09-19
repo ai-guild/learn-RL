@@ -7,8 +7,3 @@ from pl_bolts.models.rl import Reinforce
 reinforce = Reinforce("CartPole-v0")
 trainer = Trainer()
 trainer.fit(reinforce)
-
-
-# ####
-# ####
-# ####

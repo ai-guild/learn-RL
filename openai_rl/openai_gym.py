@@ -47,6 +47,7 @@ class DQN:
     def update_target_model(self):
         self.target_model.set_weights(self.model.get_weights())
 
+    # Time Complexity: O(1)
     def act(self, state):
         if np.random.rand() <= self.epsilon:
             return self.env.action_space.sample()
@@ -57,6 +58,13 @@ class DQN:
     def remember(self, state, action, reward, new_state, done):
         self.memory.append((state, action, reward, new_state, done))
 
+    # The agent has a memory of the last 100,000 game steps, which is represented as a list of tuples.
+    # 
+    # Args:
+    #   self: the agent itself
+    #   batch_size: How many samples in each minibatch.
+    # Returns:
+    #   The action with the highest Q-value.
     def replay(self, batch_size):
         minibatch = random.sample(self.memory, batch_size)
         for state, action, reward, new_state, done in minibatch:

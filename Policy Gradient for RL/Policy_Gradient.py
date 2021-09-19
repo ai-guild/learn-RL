@@ -12,6 +12,7 @@ Policy Gradient Method.
 input_dim = 4
 gamma = 0.99
 num_hidden = 10
+
 class PolicyGradient:
     def __init__(self, num_hidden = 10, learning_rate = 1e-2):
         self.gamma = gamma
@@ -71,7 +72,8 @@ class PolicyGradient:
 
         while self.episode_number <= self.total_episodes:
 
-            #Only render when the agent reward passes some threshold
+            #Only render when the agent rewa
+            # rd passes some threshold
             if self.reward_sum / self.batch_size > 100 or self.rendering == True:
                 env.render()
                 self.rendering = True

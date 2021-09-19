@@ -81,6 +81,7 @@ class Deep_Q_Network:
             print("Could not find old network weights")
 
     def trainAgentNetwork(self, frame_step):
+        
 
 
     def convolution_layer2D(self, x, Weight, bias, strides = 1):
